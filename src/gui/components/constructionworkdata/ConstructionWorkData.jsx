@@ -7,8 +7,8 @@ import Miscellaneous from './miscellaneous/Miscellaneous';
 
 const TABS = [
     { key: 'Foundation', label: 'Foundation', component: Foundation },
-    { key: 'SubStructure', label: 'Sub Structure', component: SubStructure },
     { key: 'SuperStructure', label: 'Super Structure', component: SuperStructure },
+    { key: 'SubStructure', label: 'Sub Structure', component: SubStructure },
     { key: 'Miscellaneous', label: 'Miscellaneous', component: Miscellaneous },
 ];
 
