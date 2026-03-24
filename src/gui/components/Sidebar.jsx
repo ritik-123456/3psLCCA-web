@@ -42,6 +42,11 @@ const ICON_MAP = {
     "Outputs": "bar-chart",
 };
 
+// Maps parent nodes to the first child that should be auto-selected
+const FIRST_CHILD_MAP = {
+    "Input Parameters": "Construction Work Data",
+};
+
 const TreeNode = ({ label, childrenData, depth, activeNode, setActiveNode }) => {
     const hasChildren = childrenData && (Array.isArray(childrenData) ? childrenData.length > 0 : Object.keys(childrenData).length > 0);
     const [isExpanded, setIsExpanded] = useState(true);
@@ -53,7 +58,9 @@ const TreeNode = ({ label, childrenData, depth, activeNode, setActiveNode }) => 
         if (hasChildren) {
             setIsExpanded(!isExpanded);
         }
-        setActiveNode(label);
+        // If this node has a designated first child, navigate to it instead
+        const redirectTo = FIRST_CHILD_MAP[label];
+        setActiveNode(redirectTo || label);
     };
 
     const nodeColor = isActive ? 'var(--app-text-primary)' : 'var(--app-text-secondary)';
