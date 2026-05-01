@@ -9,6 +9,9 @@ import TrafficData from './gui/components/trafficdata/TrafficData'
 import ConstructionWorkData from './gui/components/constructionworkdata/ConstructionWorkData'
 import CarbonEmissionContainer from './gui/components/carbon_emission/CarbonEmissionContainer'
 import Logs from './gui/components/Logs'
+import MaintenanceAndRepair from './gui/components/maintenance_and_repair/MaintenanceAndRepair'
+import Recycling from './gui/components/recycling/Recycling'
+import Demolition from './gui/components/demolition/Demolition'
 import './App.css'
 
 
@@ -74,6 +77,9 @@ function App() {
     'Machinery Emissions': <CarbonEmissionContainer initialTab="Machinery" />,
     'Traffic Diversion Emissions': <CarbonEmissionContainer initialTab="Traffic" />,
     'Social Cost of Carbon': <CarbonEmissionContainer initialTab="SocialCost" />,
+    'Maintenance and Repair': <MaintenanceAndRepair />,
+    'Recycling': <Recycling />,
+    'Demolition': <Demolition />,
     'Logs': <Logs />,
     'Outputs': <CarbonEmissionContainer initialTab="SocialCost" />,
   }
